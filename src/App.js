@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+// components
+import Header from '@components/Header.js'
+import Title from '@components/Title.js'
+import Info from '@components/Info.js'
+import Feedback from '@components/Feedback.js'
+import Footer from '@components/Footer.js'
+import Couch from '@components/Couch.js'
+// anim on scroll
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+// style
+import styled from 'styled-components'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+
+    useEffect(() => {
+        // Animation in Scroll settings
+        Aos.init({
+            duration: 1000,
+            offset: 0,
+            delay: 300,
+            once: true,
+        });
+    }, [])
+
+    return (
+        <AppWrapper>
+            <Header />
+            <Title />
+            <Info />
+            <Feedback />
+            <Footer />
+            <Couch />
+        </AppWrapper>
+    );
+
 }
 
-export default App;
+const AppWrapper = styled.div`
+    position: relative;
+    overflow: hidden;
+`
