@@ -10,7 +10,7 @@ export default function Header() {
     return (
         <HeaderWrapper >
             <Title data-aos='fade-right'>Comfort-стол</Title>
-            <Phone data-aos='fade-left'>
+            <Phone href='tel:89818540255' data-aos='fade-left'>
                 <PhoneIcon src={phoneIcon} alt="Phone icon" />
                 <PhoneNumber>89818540255</PhoneNumber>
             </Phone>
@@ -34,7 +34,7 @@ const Title = styled.div`
     margin-right: 2%;
 `
 
-const Phone = styled.div`
+const Phone = styled.a`
     position: absolute;
     right: calc(37% - 250px);
     display: flex;
@@ -43,6 +43,9 @@ const Phone = styled.div`
     padding: 12px 20px 10px 15px;
     box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.09);
     border-radius: 30px;
+    cursor: pointer;
+    text-decoration:none;
+    color: #000;
 
     @media (max-width: 991px) {
         padding: 12px 2px;

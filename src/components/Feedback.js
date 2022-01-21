@@ -18,7 +18,7 @@ export default function Feedback() {
             window.Email.send({
                 Host: "mail.nic.ru",
                 Username: "123123@avtelma.com",
-                Password: "Qwerty12",
+                Password: "lalala",
                 To: 'insuran7test@mail.ru',
                 From: "123123@avtelma.com",
                 Subject: `Заявка от ${form.name}`,
@@ -45,7 +45,7 @@ export default function Feedback() {
 
 
     return (
-        <FeedbackWrapper data-aos='fade-up'>
+        <FeedbackWrapper id='feedback' data-aos='fade-up'>
             <Question>Остались еще <b>какие то вопросы?</b></Question>
             <P>Оставь свои данные и мы Вам перезвоним</P>
             <Form>

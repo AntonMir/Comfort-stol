@@ -13,7 +13,7 @@ export default function Title() {
                 постоянно находится в поиске дилеров продукции
                 <b> в Москве и всей России </b>
             </Text>
-            <Btn><a href='#top'>Стать партнером</a></Btn>
+            <Btn href='#feedback'>Стать партнером</Btn>
         </TitleWrapper>
     );
 }
@@ -38,7 +38,7 @@ const Text = styled.div`
     font-size: calc(1.3vw + 18px);
 `
 
-const Btn = styled.div`
+const Btn = styled.a`
     margin: 50px 0 0;
     font-size: calc(0.5vw + 12px);
     font-weight: 500;
@@ -50,6 +50,7 @@ const Btn = styled.div`
     white-space: nowrap;
     cursor: pointer;
     box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);  
+    text-decoration: none;
 
     &:active {
         box-shadow: none;   
